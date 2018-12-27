@@ -1,0 +1,34 @@
+::=S*S|S+S|S-S|A
+A::=a|b
+this is ambigous, more than 1 way to get same string
+a-b+a
+can have more than 1 tree
+make it non-ambigous
+S::=S*S
+S::=S+S
+S::=S-S
+S::=A
+A::=a|b
+
+S::=S*T|T
+T::=T+E|E
+E::=E-A|A
+A::=a|b
+
+test near 20th of january
+
+
+if recursive terminal is on left, it is left recursive, left association
+if recursice terminal is on right, it is right recursive, right association
+
+if it is left associated, use left recursion
+you want trees growing on left
+the closer a rule is to the terminal, the sooner it gets done(so if adding the mult symbol is the last step, it will be in "()")
+
+S::=S-T|T
+T::=T+E|E
+E::=E*A|A
+A::=a|b
+
+why is left recursion bad, it goes forever without evaluating on right
+

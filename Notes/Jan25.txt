@@ -1,0 +1,65 @@
+inherently ambigous - cannot remove ambigouity
+
+test: short & long answer
+a few(almost none) T/F
+
+hist: not very important
+get chonology, not dates
+what language was OOP
+
+interpreter vs compiler
+statement by statement
+
+compiler vs assembler
+assembler is a compiler
+transates intermed to binary
+
+bnf object or meta?
+Meta - defines other languages
+
+is elim L rec necicary
+yes, if parse l to R
+S->Sa|B|c
+becomes
+S->BS'|cS'
+S'->aS'|^
+
+is __ a cfg
+rules
+1 non-term on left
+no term on left
+productions
+Terminals lowercase
+non-terminals uppercase
+separated by |
+::= or ->
+
+parse LL1 table
+
+fix non-deterministic
+
+know First&Follow
+going to be confusing
+
+syntax diagram
+<exp>::=<factor>|<exp>+<factor>
+circles and boxes
+
+S=A+B|A-B
+B=b|Sb|^
+A=a
+
+First S: a
+		Follow S:$,b
+First A: a
+		Follow A:+,-
+First B:b,^,a
+		Follow B:$,b
+LL1 for ^^^^^
+
+	a		b		+		-		$
+S	1,2		
+B	4		3,5						5
+A	a
+INVALID(mult options)
+if a first goes to null then use the follow instead

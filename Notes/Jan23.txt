@@ -1,0 +1,26 @@
+3-address code
+one result, and two operands
+x:=y op z
+
+- Quadruples
+- Triples
+- Indirect Triples
+
+triple
+	op	arg1	arg2
+0	*	d		e	
+1	-	c		(0)
+2	+	b		(1)
+3	=	a		(2)
+
+indirect Triples
+uses prebuilt table?????????explained badly
+
+relop: realational operation
+
+assignment: x:=y op z
+copy: x:=y
+unconditional jump: goto L
+condidtional Jump: if x relop y goto L
+Procedural Call: Param x
+				 call p

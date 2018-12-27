@@ -1,0 +1,54 @@
+fixing CFGs :
+	Ambiguity
+	Associative Rules
+	Precedence
+	Eliminate Left-Recursion
+	Eliminate non-determinism
+
+X::=Xa|b|c|d
+
+changes to 
+X::=bX'|cX'|dX'
+X'::=aX'|^
+
+REMEBER THIS FORMULA
+separate rules with left-recursion and those without
+S::=Sa|b
+becomes:
+S::=bS'
+S'::=aS'|^
+   
+example:
+S=S+A|A
+A=a
+
+break it down: +A -> a
+A -> b
+
+becomes
+S=AS'
+S'=+AS'|^
+A=a
+
+S=abX|abY
+X=x
+Y=y
+becomes
+s=abS'
+S'=x|y
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+BNF(Backus-Naur Form)
+<non-terminal>::=<terminal>
+<if>
+<function>
+<if-else>
+
+
+<digit>::=0|1|2|3|4|...|9
+<number>::=<digit><number>|^
+
+remove non-determinism by left-factoring(add S' and shit like this)
+
+syntax diagrams
+circles are terminals
+rectangeles are non-terminals

@@ -1,0 +1,75 @@
+GET MARKERS BACK AT END OF CLASS
+midterm on the 27th
+EoQ on Feb 23
+
+BNF
+<non-terminal> ::=<terminal> <non-terminal>
+
+EBNF
+{} 0 or more
+[] optional
+(...|...|...)alternate choices
+
+BNF
+<operator>::=+|-|*|%
+EBNF
+<operator>::=(+|-|*|%)
+
+BNF
+<op>=<digit>+<digit>|<digit>-<digit>
+
+EBNF
+<op>=<digit>(+|-)<digit>
+
+
+BNF
+<A>::=xbx|xx
+becomes
+EBNF
+<A>::=x[b]x
+
+syntax diagram or railway diagram
+circle = terminal () in here
+square=non-terminal [] in here
+
+<A>::=<A>a|a
+becomes
+<A>::=a{a}
+
+<exp>=<num>|-<num>
+<num>=<digits>|<digits>.<digits>
+<digits>=<digit>|<digit><digits>
+<digits>=<0|1|2|...|9>
+becomes
+<exp>=[-]<num>
+<num>=<digits>[.<digits>]
+<digits>=<digit>[<digits>]
+<digit>(<0|1|2|...|9>)
+
+<exp>=<num>|-<num>
+<num>=<digits>|<digits>.<digits>
+<digits>=<digit>|<digit><digits>
+<digits>=<0|1|2|...|9>
+<new-digits>=<digits>|^            **********
+becomes
+<exp>=[-]<num>
+<num>=<digits>[.<digits>]
+<digits>=<digit>[<digits>]
+<digit>(<0|1|2|...|9>)
+<new-digits>=[digits]              **********this is the difference from prev example
+
+
+BNF
+<exp>=<term>|<exp>+<term>
+EBNF
+<exp>=[<exp>+]<term>
+
+<term>=<fac>|<term><fac>
+to
+<term>=[<term>*]<fac> ******incomplete??? not sure how, what he said (technically correct, but written wrong)
+or
+<term>={<term>*}<fac>
+or
+<term>={<fac>*}<fac>
+IF YOU HAVE RECURSION USE {} BECAUSE REASONS
+

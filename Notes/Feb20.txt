@@ -1,0 +1,14 @@
+Deterministic
+S::=Ab|Ac
+A::=a
+becomes
+S::=AS'|d
+S'::=b|c
+A::=a
+
+
+Quadruples:
+t1 = a * b
+s = t1 -c
+
+if it uses a temp variable, it is a quadruple

@@ -1,0 +1,39 @@
+High-level code			Machine code
+statement				instruction
+expresion				Instruction
+variable				Memory
+value					bit-vector/bitmap
+type 					memory layout
+control structure		jump
+function				subroutine
+tree structure			Linear
+						
+Finite Automata
+-accepts "Regular Expressions"
+	input table 
+	head - 
+	memory - states
+	
+Formal Definitio:
+{ E,S, F, I, T}
+S - states
+F-Final
+I-Initial
+T-transitions
+E-should be summation symbol - alphabet
+
+arrow pointin in is a start 
+double circle is final state
+subset construction - create a new one for the same language to make it simpeler
+minimization - collapse into fewest possible lines
+
+a/*b/*c*/d*/e
+ --------
+ comments
+  
+uncommented
+ad*/e
+the second open doesn't actually happen, it is just part of the comment
+
+it is always possible to change a non-deterministic FA to deterministic
+FINAL ON FEB 22
